@@ -1,3 +1,5 @@
+import java.util.UUID;
+
 //test git
 class Calculator {
 
@@ -54,14 +56,7 @@ class Calculator {
      */
     String intToBinaryNumber(int n){
         // Creating and assigning binary array size
-        String s = "";
-        while (n > 0)
-        {
-            s =  ( (n % 2 ) == 0 ? "0" : "1") +s;
-            n = n / 2;
-        }
-        return s;
-
+        return Integer.toBinaryString(n);
     }
 
     /*
@@ -74,7 +69,7 @@ class Calculator {
      */
     String createUniqueID(String n){
 
-        return null;
+        return n + UUID.randomUUID().toString();
     }
 
 
